@@ -141,6 +141,28 @@ nav.scrolled .nav-logo img { height: 32px; }
 }
 .hero-pretag::before { content: ''; width: 5px; height: 5px; background: var(--gold); border-radius: 50%; animation: pulse 2s infinite; }
 @keyframes pulse { 0%,100%{opacity:1;transform:scale(1)} 50%{opacity:0.5;transform:scale(0.7)} }
+.hero-logo-wrapper {
+  margin: 2rem 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  animation: heroIn 1.2s 0.25s cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+
+.hero-logo {
+  height: 80px;
+  width: auto;
+  object-fit: contain;
+  opacity: 0.95;
+  transition: opacity 0.3s ease, transform 0.3s ease;
+  filter: drop-shadow(0 0 15px rgba(201, 168, 76, 0.2));
+}
+
+.hero-logo:hover {
+  opacity: 1;
+  transform: scale(1.05);
+  filter: drop-shadow(0 0 25px rgba(201, 168, 76, 0.4));
+}
 
 .hero-title {
   font-family: var(--serif); font-size: clamp(3.2rem, 7vw, 7rem);
